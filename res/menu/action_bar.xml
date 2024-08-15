@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:icon="@drawable/new_file" android:id="@id/action_new" android:title="@string/action_bar_new" />
+	<item android:icon="@drawable/open" android:id="@id/action_open" android:title="@string/action_bar_open" />
+	<item android:icon="@drawable/save" android:id="@id/action_save" android:title="@string/action_bar_save" />
+	<item android:icon="@drawable/close" android:id="@id/action_close" android:title="@string/action_bar_close" />
+	<item android:icon="@drawable/save_as" android:id="@id/action_save_as" android:title="@string/action_bar_save_as" />
+	<item android:icon="@drawable/undo" android:id="@id/action_undo" android:title="@string/action_bar_undo" />
+	<item android:icon="@drawable/redo" android:id="@id/action_redo" android:title="@string/action_bar_redo" />
+	<item android:icon="@drawable/find" android:id="@id/action_find" android:title="@string/action_bar_find_replace" />
+	<item android:icon="@drawable/find" android:id="@id/action_goto" android:title="@string/action_bar_goto_line" />
+	<item android:icon="@drawable/share" android:id="@id/action_file_actions" android:title="@string/action_bar_file_actions">
+		<menu>
+			<item android:icon="@drawable/share_action" android:id="@id/action_share" android:title="@string/external_send_file" />
+			<item android:icon="@drawable/force" android:id="@id/action_syntax" android:title="@string/action_bar_force_syntax" />
+			<item android:icon="@drawable/git" android:id="@id/action_git_actions" android:title="@string/action_bar_git_actions" />
+			<item android:icon="@drawable/play" android:id="@id/action_run_external" android:title="@string/external_run_external" />
+			<item android:icon="@drawable/play" android:id="@id/action_run_sl4a_back" android:title="@string/external_run_in_sl4a_background" />
+			<item android:icon="@drawable/play" android:id="@id/action_run_sl4a_term" android:title="@string/external_run_in_sl4a_terminal" />
+			<item android:icon="@drawable/preview" android:id="@id/action_preview" android:title="@string/external_preview_broser" />
+			<item android:icon="@drawable/shortcut" android:id="@id/action_create_shortcut" android:title="@string/action_bar_create_shortcut" />
+		</menu>
+	</item>
+	<item android:icon="@drawable/text" android:id="@id/action_text_actions" android:title="@string/action_bar_text_actions">
+		<menu>
+			<item android:icon="@drawable/select_all" android:id="@id/action_select_all" android:title="@string/action_bar_select_all" />
+			<item android:icon="@drawable/cut" android:id="@id/action_cut" android:title="@string/action_bar_cut" />
+			<item android:icon="@drawable/copy" android:id="@id/action_copy" android:title="@string/action_bar_copy" />
+			<item android:icon="@drawable/paste" android:id="@id/action_paste" android:title="@string/action_bar_paste" />
+			<item android:icon="@drawable/color" android:id="@id/action_insert_color" android:title="@string/action_bar_insert_color" />
+			<item android:icon="@drawable/indent" android:id="@id/action_indent" android:title="@string/action_bar_indent" />
+			<item android:icon="@drawable/unindent" android:id="@id/action_unindent" android:title="@string/action_bar_unindent" />
+			<item android:icon="@drawable/expand" android:id="@id/action_expand" android:title="@string/action_bar_expand" android:titleCondensed="@string/action_bar_expand_condensed" />
+		</menu>
+	</item>
+	<item android:id="@id/action_read_only" android:title="@string/action_bar_read_only" android:checkable="true" />
+	<item android:id="@id/action_extra_keys" android:title="@string/action_bar_extra_keys" android:checkable="true" />
+	<item android:id="@id/action_writer_mode" android:title="@string/action_bar_writer_mode" android:checkable="true" />
+	<item android:icon="@drawable/new_file" android:id="@id/action_ask_encoding" android:title="@string/action_bar_ask_encoding" android:checkable="true" />
+	<item android:icon="@drawable/preferences" android:id="@id/action_settings" android:title="@string/action_bar_settings" />
+	<item android:id="@id/action_help" android:title="@string/pref_help" />
+	<item android:icon="@drawable/preferences" android:id="@id/action_exit" android:title="@string/action_bar_exit" />
+</menu>

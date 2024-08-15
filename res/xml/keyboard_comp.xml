@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="12.5%p" android:keyHeight="7.0000052%p" android:horizontalGap="2.0dip">
+	<Row android:rowEdgeFlags="bottom|top">
+		<Key android:keyEdgeFlags="left" android:keyOutputText="=" android:keyLabel="=" />
+		<Key android:keyOutputText="&lt;" android:keyLabel="&lt;" />
+		<Key android:keyOutputText="&lt;=" android:keyLabel="&lt;=" />
+		<Key android:keyOutputText="==" android:keyLabel="==" />
+		<Key android:keyOutputText=">=" android:keyLabel=">=" />
+		<Key android:keyOutputText=">" android:keyLabel=">" />
+		<Key android:keyEdgeFlags="right" android:keyOutputText="!=" android:keyLabel="!=" />
+	</Row>
+</Keyboard>

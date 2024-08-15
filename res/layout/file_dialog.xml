@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+	<LinearLayout android:orientation="horizontal" android:background="#ffdddddd" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip">
+		<ImageView android:id="@id/home_up" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/home_up" />
+		<TextView android:textSize="16.0sp" android:textColor="#ff333333" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/current_path" android:padding="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/generic_loading" android:lines="1" android:scrollHorizontally="true" android:singleLine="true" android:layout_weight="1.0" />
+		<ImageView android:id="@id/home_folder" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/home" />
+		<ImageView android:id="@id/add_folder" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/add_folder" />
+	</LinearLayout>
+	<ImageView android:id="@id/getfilesprogress" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-5.0dip" android:src="@drawable/apptheme_progress_indeterminate_horizontal_holo_light" android:scaleType="fitXY" />
+	<ListView android:id="@id/file_list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+	<LinearLayout android:orientation="horizontal" android:id="@id/new_file_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<EditText android:id="@id/new_file_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="3.0" android:inputType="textVisiblePassword|textNoSuggestions" android:imeOptions="flagNoExtractUi|flagNoFullscreen" />
+		<Button android:id="@id/new_file_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/generic_create" android:layout_weight="7.0" />
+	</LinearLayout>
+</LinearLayout>

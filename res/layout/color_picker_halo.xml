@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/LinearLayout2" android:background="#ff222222" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.larswerkman.holocolorpicker.ColorPicker android:layout_gravity="center" android:id="@id/picker" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+	<com.larswerkman.holocolorpicker.SaturationBar android:layout_gravity="center" android:id="@id/saturation_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+	<com.larswerkman.holocolorpicker.ValueBar android:layout_gravity="center" android:id="@id/value_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dip" />
+	<EditText android:layout_gravity="center" android:id="@id/hexcolor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#334455" />
+</LinearLayout>

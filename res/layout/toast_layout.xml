@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/toast_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:textAppearance="@android:style/TextAppearance.Medium" android:textColor="@android:color/primary_text_dark" android:layout_gravity="center_horizontal" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Title" android:shadowColor="#bb000000" android:shadowRadius="2.75" android:layout_weight="1.0" />
+	<TextView android:textAppearance="@android:style/TextAppearance.Small" android:textColor="@android:color/secondary_text_dark" android:layout_gravity="center_horizontal" android:id="@android:id/message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This is a big message" android:shadowColor="#bb000000" android:shadowRadius="2.75" android:layout_weight="1.0" />
+</LinearLayout>

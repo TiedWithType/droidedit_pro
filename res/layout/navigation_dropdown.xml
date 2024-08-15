@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android" android:textAppearance="?android:textAppearanceLarge" android:ellipsize="start" android:gravity="center_vertical" android:id="@android:id/text1" android:paddingLeft="6.0dip" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" android:checkMark="?android:listChoiceIndicatorSingle" android:maxLines="1" />

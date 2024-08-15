@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+
+<!-- TypeScript mode -->
+<MODE>
+	<PROPS>
+		<PROPERTY NAME="commentStart" VALUE="/*" />
+		<PROPERTY NAME="commentEnd" VALUE="*/" />
+		<PROPERTY NAME="lineComment" VALUE="//" />
+		<PROPERTY NAME="wordBreakChars" VALUE=",+-=&lt;&gt;/?^&amp;*" />
+
+		<!-- Auto indent -->
+		<PROPERTY NAME="indentOpenBrackets" VALUE="{[" />
+		<PROPERTY NAME="indentCloseBrackets" VALUE="]}" />
+		<PROPERTY NAME="unalignedOpenBrackets" VALUE="(" />
+		<PROPERTY NAME="unalignedCloseBrackets" VALUE=")" />
+		<PROPERTY NAME="indentNextLine"
+			VALUE="\s*(((if|while)\s*\(|else\s*|else\s+if\s*\(|for\s*\(.*\))[^{;]*)" />
+		<PROPERTY NAME="unindentThisLine"
+			VALUE="^.*(default:\s*|case.*:.*)$" />
+		<PROPERTY NAME="electricKeys" VALUE=":" />
+	</PROPS>
+
+	<RULES
+		IGNORE_CASE="FALSE"
+		HIGHLIGHT_DIGITS="TRUE"
+		DIGIT_RE="(0x[\p{XDigit}]+[lL]?|[\p{Digit}]+(e[\p{Digit}]*)?[lLdDfF]?)">
+
+		<!-- TypeScript comments -->
+		<SPAN TYPE="COMMENT3">
+			<BEGIN>/**</BEGIN>
+			<END>*/</END>
+		</SPAN>
+
+		<SPAN TYPE="COMMENT1">
+			<BEGIN>/*</BEGIN>
+			<END>*/</END>
+		</SPAN>
+
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE" ESCAPE="\">
+			<BEGIN>"</BEGIN>
+			<END>"</END>
+		</SPAN>
+
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE" ESCAPE="\">
+			<BEGIN>'</BEGIN>
+			<END>'</END>
+		</SPAN>
+
+		<MARK_PREVIOUS TYPE="FUNCTION" MATCH_TYPE="OPERATOR">(</MARK_PREVIOUS>
+		<SEQ TYPE="OPERATOR">)</SEQ>
+
+		<SEQ TYPE="COMMENT2">//--&gt;</SEQ>
+		<EOL_SPAN TYPE="COMMENT2">//</EOL_SPAN>
+		<SEQ_REGEXP TYPE="MARKUP" HASH_CHAR="/" AT_WORD_START="TRUE">/[^\p{Blank}]*?/</SEQ_REGEXP>
+
+		<SEQ TYPE="COMMENT1">&lt;!--</SEQ>
+
+		<SEQ TYPE="OPERATOR">=</SEQ>
+		<SEQ TYPE="OPERATOR">!</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;=</SEQ>
+		<SEQ TYPE="OPERATOR">+</SEQ>
+		<SEQ TYPE="OPERATOR">-</SEQ>
+		<SEQ TYPE="OPERATOR">/</SEQ>
+		<SEQ TYPE="OPERATOR">*</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">%</SEQ>
+		<SEQ TYPE="OPERATOR">&amp;</SEQ>
+		<SEQ TYPE="OPERATOR">|</SEQ>
+		<SEQ TYPE="OPERATOR">^</SEQ>
+		<SEQ TYPE="OPERATOR">~</SEQ>
+		<SEQ TYPE="OPERATOR">.</SEQ>
+		<SEQ TYPE="OPERATOR">}</SEQ>
+		<SEQ TYPE="OPERATOR">{</SEQ>
+		<SEQ TYPE="OPERATOR">,</SEQ>
+		<SEQ TYPE="OPERATOR">;</SEQ>
+		<SEQ TYPE="OPERATOR">]</SEQ>
+		<SEQ TYPE="OPERATOR">[</SEQ>
+		<SEQ TYPE="OPERATOR">?</SEQ>
+		<MARK_PREVIOUS AT_WHITESPACE_END="TRUE"
+			MATCH_TYPE="OPERATOR"
+			TYPE="LABEL">:</MARK_PREVIOUS>
+		<SEQ TYPE="OPERATOR">:</SEQ>
+
+		<KEYWORDS>
+			<!-- TypeScript keywords -->
+			<KEYWORD1>abstract</KEYWORD1>
+			<KEYWORD1>as</KEYWORD1>
+			<KEYWORD1>async</KEYWORD1>
+			<KEYWORD1>await</KEYWORD1>
+			<KEYWORD1>break</KEYWORD1>
+			<KEYWORD1>case</KEYWORD1>
+			<KEYWORD1>catch</KEYWORD1>
+			<KEYWORD1>class</KEYWORD1>
+			<KEYWORD1>const</KEYWORD1>
+			<KEYWORD1>continue</KEYWORD1>
+			<KEYWORD1>debugger</KEYWORD1>
+			<KEYWORD1>default</KEYWORD1>
+			<KEYWORD1>delete</KEYWORD1>
+			<KEYWORD1>do</KEYWORD1>
+			<KEYWORD1>else</KEYWORD1>
+			<KEYWORD1>enum</KEYWORD1>
+			<KEYWORD1>export</KEYWORD1>
+			<KEYWORD1>extends</KEYWORD1>
+			<KEYWORD1>false</KEYWORD1>
+			<KEYWORD1>finally</KEYWORD1>
+			<KEYWORD1>for</KEYWORD1>
+			<KEYWORD1>from</KEYWORD1>
+			<KEYWORD1>function</KEYWORD1>
+			<KEYWORD1>if</KEYWORD1>
+			<KEYWORD1>implements</KEYWORD1>
+			<KEYWORD1>import</KEYWORD1>
+			<KEYWORD1>in</KEYWORD1>
+			<KEYWORD1>instanceof</KEYWORD1>
+			<KEYWORD1>interface</KEYWORD1>
+			<KEYWORD1>let</KEYWORD1>
+			<KEYWORD1>module</KEYWORD1>
+			<KEYWORD1>namespace</KEYWORD1>
+			<KEYWORD1>new</KEYWORD1>
+			<KEYWORD1>null</KEYWORD1>
+			<KEYWORD1>of</KEYWORD1>
+			<KEYWORD1>private</KEYWORD1>
+			<KEYWORD1>protected</KEYWORD1>
+			<KEYWORD1>public</KEYWORD1>
+			<KEYWORD1>return</KEYWORD1>
+			<KEYWORD1>super</KEYWORD1>
+			<KEYWORD1>switch</KEYWORD1>
+			<KEYWORD1>this</KEYWORD1>
+			<KEYWORD1>throw</KEYWORD1>
+			<KEYWORD1>true</KEYWORD1>
+			<KEYWORD1>try</KEYWORD1>
+			<KEYWORD1>typeof</KEYWORD1>
+			<KEYWORD1>var</KEYWORD1>
+			<KEYWORD1>void</KEYWORD1>
+			<KEYWORD1>while</KEYWORD1>
+			<KEYWORD1>with</KEYWORD1>
+			<KEYWORD1>yield</KEYWORD1>
+
+			<!-- TypeScript types -->
+			<KEYWORD2>any</KEYWORD2>
+			<KEYWORD2>boolean</KEYWORD2>
+			<KEYWORD2>number</KEYWORD2>
+			<KEYWORD2>string</KEYWORD2>
+			<KEYWORD2>symbol</KEYWORD2>
+			<KEYWORD2>unknown</KEYWORD2>
+			<KEYWORD2>never</KEYWORD2>
+			<KEYWORD2>void</KEYWORD2>
+
+			<!-- ECMAScript objects -->
+			<KEYWORD3>Array</KEYWORD3>
+			<KEYWORD3>Boolean</KEYWORD3>
+			<KEYWORD3>Date</KEYWORD3>
+			<KEYWORD3>Error</KEYWORD3>
+			<KEYWORD3>Function</KEYWORD3>
+			<KEYWORD3>Math</KEYWORD3>
+			<KEYWORD3>Number</KEYWORD3>
+			<KEYWORD3>Object</KEYWORD3>
+			<KEYWORD3>RegExp</KEYWORD3>
+			<KEYWORD3>String</KEYWORD3>
+
+			<!-- ECMAScript literals -->
+			<LITERAL2>false</LITERAL2>
+			<LITERAL2>null</LITERAL2>
+			<LITERAL2>true</LITERAL2>
+			<LITERAL2>NaN</LITERAL2>
+			<LITERAL2>undefined</LITERAL2>
+			<LITERAL2>Infinity</LITERAL2>
+
+			<!-- Global functions -->
+			<LITERAL2>eval</LITERAL2>
+			<LITERAL2>parseInt</LITERAL2>
+			<LITERAL2>parseFloat</LITERAL2>
+			<LITERAL2>isNaN</LITERAL2>
+			<LITERAL2>isFinite</LITERAL2>
+			<LITERAL2>decodeURI</LITERAL2>
+			<LITERAL2>decodeURIComponent</LITERAL2>
+			<LITERAL2>encodeURI</LITERAL2>
+			<LITERAL2>encodeURIComponent</LITERAL2>
+			<LITERAL2>escape</LITERAL2>
+			<LITERAL2>unescape</LITERAL2>
+		</KEYWORDS>
+	</RULES>
+</MODE>

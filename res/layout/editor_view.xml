@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/keyboardLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.aor.droidedit.custom.ObservableScrollView android:id="@id/scrollview" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+		<LinearLayout android:orientation="horizontal" android:id="@id/editorInnerLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<EditText android:textSize="10.0sp" android:typeface="monospace" android:gravity="center|right|top" android:id="@id/lineNumbers" android:padding="2.0dip" android:focusable="false" android:layout_width="40.0dip" android:layout_height="fill_parent" android:maxLength="1000000" />
+			<View android:id="@id/lineDivider" android:background="#ff000000" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+			<com.aor.droidedit.custom.FastHorizontalScrollView android:id="@id/editorHorizontalLayout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="1.0">
+				<com.aor.droidedit.custom.ObservableEditText android:typeface="monospace" android:gravity="center|left|top" android:id="@id/textEditor" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="1000000" android:inputType="textMultiLine" android:imeOptions="flagNoExtractUi" />
+			</com.aor.droidedit.custom.FastHorizontalScrollView>
+		</LinearLayout>
+	</com.aor.droidedit.custom.ObservableScrollView>
+	<android.inputmethodservice.KeyboardView android:id="@id/keyboard" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:keyBackground="@drawable/key_selector" android:keyTextSize="22.0sp" android:popupLayout="@layout/keyboard_popup_layout" />
+</LinearLayout>

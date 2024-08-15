@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyWidth="12.5%p" android:keyHeight="7.0000052%p" android:horizontalGap="4.0dip">
+	<Row android:rowEdgeFlags="bottom|top">
+		<Key android:keyEdgeFlags="left" android:keyOutputText="\u0009" android:keyLabel="→" />
+		<Key android:keyOutputText="{X}" android:keyLabel="{ }" />
+		<Key android:keyOutputText="(X)" android:keyLabel="( )" />
+		<Key android:keyOutputText="[X]" android:keyLabel="[ ]" />
+		<Key android:popupKeyboard="@xml/keyboard_quote" android:keyOutputText="'X'" android:keyLabel="' '" />
+		<Key android:popupKeyboard="@xml/keyboard_symbol" android:keyOutputText="//X" android:keyLabel="//" />
+		<Key android:popupKeyboard="@xml/keyboard_punct" android:keyOutputText=";" android:keyLabel=";" />
+		<Key android:popupKeyboard="@xml/keyboard_web" android:keyOutputText="&lt;X>" android:keyLabel="&lt; >" />
+		<Key android:popupKeyboard="@xml/keyboard_comp" android:keyOutputText="=" android:keyLabel="=" />
+		<Key android:popupKeyboard="@xml/keyboard_slash" android:keyEdgeFlags="right" android:keyOutputText="|" android:keyLabel="|" />
+	</Row>
+</Keyboard>

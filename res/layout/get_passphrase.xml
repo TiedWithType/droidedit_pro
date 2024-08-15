@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@id/LinearLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<EditText android:id="@id/session_passphrase" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPassword">
+		<requestFocus />
+	</EditText>
+	<CheckBox android:id="@id/save_session_passphrase" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/pref_sftp_save_passphrase" android:layout_below="@id/passphrase_text_view" android:layout_alignParentLeft="true" />
+</LinearLayout>

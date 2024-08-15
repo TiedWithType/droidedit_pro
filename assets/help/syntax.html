@@ -1,0 +1,41 @@
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width">
+	 <meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h1><a href="index.html">DroidEdit Help</a></h1>
+		<h2>Syntax Highlighting</h2>
+		<p>Configuring the correct syntax highlighting for each type of file.</p>
+		<h3>Summary</h3>
+		<ul>
+ <li><a href="#supported">Supported Languages</a></li>
+ <li><a href="#turnoff">Turning Off Syntax Highlighting</a></li>
+ <li><a href="#forcing">Forcing Syntax Highlighting</a></li>
+		</ul>
+
+		<h3 id="supported">Supported Languages</h3>
+		
+		<p>Currently, DroidEdit supports syntax highlighting for the following languages: Assembly X86, C, C++, C#, Clojure, CSS, Delphi, DTD, Fortran, Groovy, HTML, Java, JavaScript, JSON, JavaServer Pages, LaTeX, Lisp, Lua, Pascal, Perl, PHP, Python, Ruby, Scala, Shell Script, SQL and XML.</p>
+
+		<p>DroidEdit's syntax highlighting is based on the RSyntaxTextArea (<a href="http://fifesoft.com/rsyntaxtextarea/">fifesoft.com/rsyntaxtextarea</a>) open source project under a modified BSD license. RSyntaxArea syntax files are created using JFlex, a lexical analyzer generator for Java, and, although extremely powerful, are not trivial to write.</p>
+
+		<p>If you need support for a different language, you can either try writing your own JFlex syntax file (and contribute for the open source project) or try asking the developers of RSyntaxArea to support your language scheme. Either way, you should start by reading <a href="http://fifesoft.com/forum/viewtopic.php?f=10&t=268">this</a> post in RSyntaxArea's forums.</p>
+		
+		<h3 id="turnoff">Turning Off Syntax Highlighting</h3>
+		
+		<p>You can turn syntax highlighting off using the <span class="setting">Editor &rarr; Syntax Highlighting</span> preference.</span></p>
+		
+		<h3 id="forcing">Forcing Syntax Highlighting</h3>
+
+		<p>DroidEdit uses the file extension to determine which syntax scheme to use. If you would like to use a particular syntax scheme with a file extension not recognized by DroidEdit, you should:</p>
+		
+		<ol>
+			<li class="other">Select <span class="menu">File Actions &rarr; Force Syntax...</span> from the <a href="menus.html">menu</a>.</li>
+			<li>Select the desired language</li>
+			<li>Select if you want to keep the association between the current file extension and the selected language permanent.</li>
+		</ol>			
+		
+	</body>
+</html>

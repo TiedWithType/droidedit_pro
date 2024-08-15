@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SlidingDrawer xmlns:android="http://schemas.android.com/apk/res/android" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/SlidingDrawerMenu" android:focusable="false" android:layout_width="fill_parent" android:layout_height="50.0dip" android:handle="@id/footerLayout" android:content="@id/menu">
+	<LinearLayout android:gravity="fill_horizontal" android:id="@id/menu" android:background="#ff111111" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/newFileButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_file_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/openFileButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/open_file_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/saveFileButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/save_file_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/closeFileButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_file_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/undoButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/undo_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/redoButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/redo_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/openFindButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/find_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/share_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+		<ImageView android:layout_gravity="center_vertical" android:id="@id/settings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_selector" android:adjustViewBounds="true" android:layout_weight="1.0" />
+	</LinearLayout>
+	<LinearLayout android:orientation="horizontal" android:id="@id/footerLayout" android:background="#ff111111" android:layout_width="fill_parent" android:layout_height="20.0dip">
+		<TextView android:textSize="10.0sp" android:typeface="monospace" android:layout_gravity="center|left" android:id="@id/footer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:lines="1" android:layout_weight="1.0" android:inputType="textNoSuggestions" />
+		<ImageView android:layout_gravity="center" android:id="@id/menudrawerbutton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/open_drawer_h" />
+		<TextView android:textSize="10.0sp" android:textColor="#ffbbbbbb" android:gravity="center|right" android:id="@id/footer_encoding" android:padding="2.0dip" android:layout_width="0.0dip" android:layout_height="20.0dip" android:scrollHorizontally="true" android:layout_weight="1.0" android:inputType="textNoSuggestions" />
+	</LinearLayout>
+</SlidingDrawer>

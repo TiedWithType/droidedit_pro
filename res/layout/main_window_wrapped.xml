@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/drawer_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@id/mainLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<include layout="@layout/editor_view_wrapped" />
+		<include layout="@layout/right_panel_view" />
+		<include layout="@layout/menu_view" />
+		<include layout="@layout/progress_bar" />
+		<include layout="@layout/info_panel" />
+		<LinearLayout android:id="@id/undobar" android:visibility="gone" style="@style/UndoBar">
+			<TextView android:id="@id/undobar_message" style="@style/UndoBarMessage" />
+			<Button android:id="@id/undobar_button" style="@style/UndoBarButton" />
+		</LinearLayout>
+	</FrameLayout>
+	<include layout="@layout/left_drawer" />
+</android.support.v4.widget.DrawerLayout>
