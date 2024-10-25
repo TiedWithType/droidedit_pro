@@ -14,7 +14,7 @@
 
 	<RULES IGNORE_CASE="TRUE"
 		HIGHLIGHT_DIGITS="TRUE"
-		DIGIT_RE="-?\d+(\.\d+)?(pt|pc|in|mm|cm|em|ex|px|ms|s|%|)"
+		DIGIT_RE="-?\d+(\.\d+)?(rem|cap|ch|fr|pt|pc|in|mm|cm|em|ex|px|ms|s|%|)"
 		NO_WORD_SEP="-_%">
 
 		<!-- classes: -->
@@ -71,6 +71,10 @@
 			<KEYWORD4>active</KEYWORD4>
 			<KEYWORD4>hover</KEYWORD4>
 			<KEYWORD4>focus</KEYWORD4>
+<KEYWORD4>is</KEYWORD4>
+<KEYWORD4>has</KEYWORD4>
+<KEYWORD4>not</KEYWORD4>
+<KEYWORD4>where</KEYWORD4>
 		</KEYWORDS>
 	</RULES>
 
@@ -84,6 +88,12 @@
 		<IMPORT DELEGATE="GLOBAL" />
 
 		<KEYWORDS>
+   
+   <KEYWORD2>block-size</KEYWORD2>
+			<KEYWORD2>inline-size</KEYWORD2>
+   <KEYWORD2>place-items</KEYWORD2>
+   <KEYWORD2>place-content</KEYWORD2>
+   <KEYWORD2>grid</KEYWORD2>
 			<!-- CSS2 & 3 properties -->
 
 			<!-- Color and background properties -->
@@ -302,100 +312,100 @@
 			
 			<!-- these properties are proposed for css3, but are either not
 			supported by any browser or are specific to a single browser. -->
-			<INVALID>alignment-adjust</INVALID> 					
-			<INVALID>alignment-baseline</INVALID>			
-			<INVALID>backface-visibility</INVALID> 					
-			<INVALID>baseline-shift</INVALID> 					
-			<INVALID>bookmark-label</INVALID> 					
-			<INVALID>bookmark-level</INVALID> 					
-			<INVALID>bookmark-target</INVALID>	
-			<INVALID>border-image</INVALID> 					
-			<INVALID>border-image-outset</INVALID> 					
-			<INVALID>border-image-repeat</INVALID> 					
-			<INVALID>border-image-slice</INVALID> 					
-			<INVALID>border-image-source</INVALID> 					
-			<INVALID>border-image-width</INVALID>
-			<INVALID>box-decoration-break</INVALID>
-			<INVALID>box-flex-group</INVALID> 					
-			<INVALID>box-lines</INVALID>
-			<INVALID>color-profile</INVALID> 					
-			<INVALID>column-fill</INVALID>
-			<INVALID>crop</INVALID> 					
-			<INVALID>dominant-baseline</INVALID> 					
-			<INVALID>drop-initial-after-adjust</INVALID> 					
-			<INVALID>drop-initial-after-align</INVALID> 					
-			<INVALID>drop-initial-before-adjust</INVALID> 					
-			<INVALID>drop-initial-before-align</INVALID> 					
-			<INVALID>drop-initial-size</INVALID> 					
-			<INVALID>drop-initial-value</INVALID> 					
-			<INVALID>fit</INVALID> 					
-			<INVALID>fit-position</INVALID> 					
-			<INVALID>float-offset</INVALID>
-			<INVALID>font-stretch</INVALID> 					
-			<INVALID>font-size-adjust</INVALID> 					
-			<INVALID>grid-columns</INVALID> 					
-			<INVALID>grid-rows</INVALID> 					
-			<INVALID>hanging-punctuation</INVALID> 					
-			<INVALID>hyphenate-after</INVALID> 					
-			<INVALID>hyphenate-before</INVALID> 					
-			<INVALID>hyphenate-characters</INVALID> 					
-			<INVALID>hyphenate-lines</INVALID> 					
-			<INVALID>hyphenate-resource</INVALID> 					
-			<INVALID>hyphens</INVALID> 					
-			<INVALID>icon</INVALID> 					
-			<INVALID>image-orientation</INVALID> 					
-			<INVALID>image-resolution</INVALID>
-			<INVALID>inline-box-align</INVALID> 					
-			<INVALID>line-stacking</INVALID> 					
-			<INVALID>line-stacking-ruby</INVALID> 					
-			<INVALID>line-stacking-shift</INVALID> 					
-			<INVALID>line-stacking-strategy</INVALID> 					
-			<INVALID>mark</INVALID> 					
-			<INVALID>mark-after</INVALID> 					
-			<INVALID>mark-before</INVALID> 					
-			<INVALID>marks</INVALID> 					
-			<INVALID>marquee-direction</INVALID> 					
-			<INVALID>marquee-play-count</INVALID> 					
-			<INVALID>marquee-speed</INVALID> 					
-			<INVALID>marquee-style</INVALID> 					
-			<INVALID>move-to</INVALID>
-			<INVALID>nav-down</INVALID>
-			<INVALID>nav-index</INVALID>
-			<INVALID>nav-left</INVALID>
-			<INVALID>nav-right</INVALID>
-			<INVALID>nav-up</INVALID>
-			<INVALID>overflow-style</INVALID>
-			<INVALID>page</INVALID> 					
-			<INVALID>page-policy</INVALID>
-			<INVALID>phonemes</INVALID>
-			<INVALID>punctuation-trim</INVALID>
-			<INVALID>rest</INVALID> 					
-			<INVALID>rest-after</INVALID> 					
-			<INVALID>rest-before</INVALID> 					
-			<INVALID>rotation</INVALID> 					
-			<INVALID>rotation-point</INVALID>
-			<INVALID>ruby-align</INVALID> 					
-			<INVALID>ruby-overhang</INVALID> 					
-			<INVALID>ruby-position</INVALID> 					
-			<INVALID>ruby-span</INVALID> 					
-			<INVALID>size</INVALID> 					
-			<INVALID>string-set</INVALID> 					
-			<INVALID>target</INVALID> 					
-			<INVALID>target-name</INVALID> 					
-			<INVALID>target-new</INVALID> 					
-			<INVALID>target-position</INVALID> 					
-			<INVALID>text-align-last</INVALID> 					
-			<INVALID>text-emphasis</INVALID> 					
-			<INVALID>text-height</INVALID>
-			<INVALID>text-outline</INVALID>
-			<INVALID>text-wrap</INVALID>
-			<INVALID>voice-balance</INVALID> 					
-			<INVALID>voice-duration</INVALID> 					
-			<INVALID>voice-pitch</INVALID> 					
-			<INVALID>voice-pitch-range</INVALID> 					
-			<INVALID>voice-rate</INVALID> 					
-			<INVALID>voice-stress</INVALID> 					
-			<INVALID>voice-volume</INVALID>
+			<KEYWORD2>alignment-adjust</KEYWORD2> 					
+			<KEYWORD2>alignment-baseline</KEYWORD2>			
+			<KEYWORD2>backface-visibility</KEYWORD2> 					
+			<KEYWORD2>baseline-shift</KEYWORD2> 					
+			<KEYWORD2>bookmark-label</KEYWORD2> 					
+			<KEYWORD2>bookmark-level</KEYWORD2> 					
+			<KEYWORD2>bookmark-target</KEYWORD2>	
+			<KEYWORD2>border-image</KEYWORD2> 					
+			<KEYWORD2>border-image-outset</KEYWORD2> 					
+			<KEYWORD2>border-image-repeat</KEYWORD2> 					
+			<KEYWORD2>border-image-slice</KEYWORD2> 					
+			<KEYWORD2>border-image-source</KEYWORD2> 					
+			<KEYWORD2>border-image-width</KEYWORD2>
+			<KEYWORD2>box-decoration-break</KEYWORD2>
+			<KEYWORD2>box-flex-group</KEYWORD2> 					
+			<KEYWORD2>box-lines</KEYWORD2>
+			<KEYWORD2>color-profile</KEYWORD2> 					
+			<KEYWORD2>column-fill</KEYWORD2>
+			<KEYWORD2>crop</KEYWORD2> 					
+			<KEYWORD2>dominant-baseline</KEYWORD2> 					
+			<KEYWORD2>drop-initial-after-adjust</KEYWORD2> 					
+			<KEYWORD2>drop-initial-after-align</KEYWORD2> 					
+			<KEYWORD2>drop-initial-before-adjust</KEYWORD2> 					
+			<KEYWORD2>drop-initial-before-align</KEYWORD2> 					
+			<KEYWORD2>drop-initial-size</KEYWORD2> 					
+			<KEYWORD2>drop-initial-value</KEYWORD2> 					
+			<KEYWORD2>fit</KEYWORD2> 					
+			<KEYWORD2>fit-position</KEYWORD2> 					
+			<KEYWORD2>float-offset</KEYWORD2>
+			<KEYWORD2>font-stretch</KEYWORD2> 					
+			<KEYWORD2>font-size-adjust</KEYWORD2> 					
+			<KEYWORD2>grid-columns</KEYWORD2> 					
+			<KEYWORD2>grid-rows</KEYWORD2> 					
+			<KEYWORD2>hanging-punctuation</KEYWORD2> 					
+			<KEYWORD2>hyphenate-after</KEYWORD2> 					
+			<KEYWORD2>hyphenate-before</KEYWORD2> 					
+			<KEYWORD2>hyphenate-characters</KEYWORD2> 					
+			<KEYWORD2>hyphenate-lines</KEYWORD2> 					
+			<KEYWORD2>hyphenate-resource</KEYWORD2> 					
+			<KEYWORD2>hyphens</KEYWORD2> 					
+			<KEYWORD2>icon</KEYWORD2> 					
+			<KEYWORD2>image-orientation</KEYWORD2> 					
+			<KEYWORD2>image-resolution</KEYWORD2>
+			<KEYWORD2>inline-box-align</KEYWORD2> 					
+			<KEYWORD2>line-stacking</KEYWORD2> 					
+			<KEYWORD2>line-stacking-ruby</KEYWORD2> 					
+			<KEYWORD2>line-stacking-shift</KEYWORD2> 					
+			<KEYWORD2>line-stacking-strategy</KEYWORD2> 					
+			<KEYWORD2>mark</KEYWORD2> 					
+			<KEYWORD2>mark-after</KEYWORD2> 					
+			<KEYWORD2>mark-before</KEYWORD2> 					
+			<KEYWORD2>marks</KEYWORD2> 					
+			<KEYWORD2>marquee-direction</KEYWORD2> 					
+			<KEYWORD2>marquee-play-count</KEYWORD2> 					
+			<KEYWORD2>marquee-speed</KEYWORD2> 					
+			<KEYWORD2>marquee-style</KEYWORD2> 					
+			<KEYWORD2>move-to</KEYWORD2>
+			<KEYWORD2>nav-down</KEYWORD2>
+			<KEYWORD2>nav-index</KEYWORD2>
+			<KEYWORD2>nav-left</KEYWORD2>
+			<KEYWORD2>nav-right</KEYWORD2>
+			<KEYWORD2>nav-up</KEYWORD2>
+			<KEYWORD2>overflow-style</KEYWORD2>
+			<KEYWORD2>page</KEYWORD2> 					
+			<KEYWORD2>page-policy</KEYWORD2>
+			<KEYWORD2>phonemes</KEYWORD2>
+			<KEYWORD2>punctuation-trim</KEYWORD2>
+			<KEYWORD2>rest</KEYWORD2> 					
+			<KEYWORD2>rest-after</KEYWORD2> 					
+			<KEYWORD2>rest-before</KEYWORD2> 					
+			<KEYWORD2>rotation</KEYWORD2> 					
+			<KEYWORD2>rotation-point</KEYWORD2>
+			<KEYWORD2>ruby-align</KEYWORD2> 					
+			<KEYWORD2>ruby-overhang</KEYWORD2> 					
+			<KEYWORD2>ruby-position</KEYWORD2> 					
+			<KEYWORD2>ruby-span</KEYWORD2> 					
+			<KEYWORD2>size</KEYWORD2> 					
+			<KEYWORD2>string-set</KEYWORD2> 					
+			<KEYWORD2>target</KEYWORD2> 					
+			<KEYWORD2>target-name</KEYWORD2> 					
+			<KEYWORD2>target-new</KEYWORD2> 					
+			<KEYWORD2>target-position</KEYWORD2> 					
+			<KEYWORD2>text-align-last</KEYWORD2> 					
+			<KEYWORD2>text-emphasis</KEYWORD2> 					
+			<KEYWORD2>text-height</KEYWORD2>
+			<KEYWORD2>text-outline</KEYWORD2>
+			<KEYWORD2>text-wrap</KEYWORD2>
+			<KEYWORD2>voice-balance</KEYWORD2> 					
+			<KEYWORD2>voice-duration</KEYWORD2> 					
+			<KEYWORD2>voice-pitch</KEYWORD2> 					
+			<KEYWORD2>voice-pitch-range</KEYWORD2> 					
+			<KEYWORD2>voice-rate</KEYWORD2> 					
+			<KEYWORD2>voice-stress</KEYWORD2> 					
+			<KEYWORD2>voice-volume</KEYWORD2>
 
 		</KEYWORDS>
 	</RULES>
@@ -404,7 +414,7 @@
 	<!-- Values: -->
 	<RULES SET="PROP_VALUE"
 		HIGHLIGHT_DIGITS="TRUE"
-		DIGIT_RE="-?\d+(\.\d+)?(pt|pc|in|mm|cm|em|ex|px|ms|s|%|)"
+		DIGIT_RE="-?\d+(\.\d+)?(rem|cap|ch|fr|pt|pc|in|mm|cm|em|ex|px|ms|s|%|)"
 		NO_WORD_SEP="-_%">
 
 		<SPAN_REGEXP TYPE="LITERAL1" ESCAPE="\" HASH_CHARS="&quot;'">

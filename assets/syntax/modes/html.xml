@@ -9,38 +9,32 @@
 	</PROPS>
 
 	<RULES IGNORE_CASE="TRUE">
-		<!-- SGML comment -->
-		<SPAN TYPE="COMMENT1">
-			<BEGIN>&lt;!--</BEGIN>
-			<END>--&gt;</END>
-		</SPAN>
+    <!-- SGML comment -->
+    <SPAN TYPE="COMMENT1">
+        <BEGIN>&lt;!--</BEGIN>
+        <END>--&gt;</END>
+    </SPAN>
 
-		<!-- JavaScript -->
-		<SEQ_REGEXP TYPE="MARKUP" DELEGATE="SCRIPT_TAG"
-					HASH_CHAR="&lt;">&lt;(?=SCRIPT\b)</SEQ_REGEXP>
+    
+    <!-- DTD instructions -->
+    <SPAN TYPE="KEYWORD2" DELEGATE="xml::DTD-TAGS">
+        <BEGIN>&lt;!</BEGIN>
+        <END>&gt;</END>
+    </SPAN>
 
-		<!-- stylesheet -->
-		<SEQ_REGEXP TYPE="MARKUP" DELEGATE="STYLE_TAG"
-					HASH_CHAR="&lt;">&lt;(?=STYLE\b)</SEQ_REGEXP>
+    <!-- Markup tags -->
+    <SPAN TYPE="MARKUP" DELEGATE="TAGS">
+        <BEGIN>&lt;</BEGIN>
+        <END>&gt;</END>
+    </SPAN>
 
-		<!-- DTD instructions -->
-		<SPAN TYPE="KEYWORD2" DELEGATE="xml::DTD-TAGS">
-			<BEGIN>&lt;!</BEGIN>
-			<END>&gt;</END>
-		</SPAN>
+    <!-- SGML entities -->
+    <SPAN TYPE="LITERAL2" NO_WORD_BREAK="TRUE">
+        <BEGIN>&amp;</BEGIN>
+        <END>;</END>
+    </SPAN>
+</RULES>
 
-		<!-- markup tags -->
-		<SPAN TYPE="MARKUP" DELEGATE="TAGS">
-			<BEGIN>&lt;</BEGIN>
-			<END>&gt;</END>
-		</SPAN>
-
-		<!-- SGML entities -->
-		<SPAN TYPE="LITERAL2" NO_WORD_BREAK="TRUE">
-			<BEGIN>&amp;</BEGIN>
-			<END>;</END>
-		</SPAN>
-	</RULES>
 
 	<!-- ESCAPE is not exactly right but it is needed to correctly
 	     handle JavaScript in on* parameters.
@@ -132,6 +126,7 @@
 			<KEYWORD1>hgroup</KEYWORD1>
 			<KEYWORD1>hr</KEYWORD1>
 			<KEYWORD1>html</KEYWORD1>
+   <KEYWORD1>script</KEYWORD1>
 			<KEYWORD1>i</KEYWORD1>
 			<KEYWORD1>iframe</KEYWORD1>
 			<KEYWORD1>img</KEYWORD1>

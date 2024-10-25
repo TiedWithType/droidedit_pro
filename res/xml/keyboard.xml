@@ -5,7 +5,7 @@
 		<Key android:keyOutputText="{X}" android:keyLabel="{ }" />
 		<Key android:keyOutputText="(X)" android:keyLabel="( )" />
 		<Key android:keyOutputText="[X]" android:keyLabel="[ ]" />
-		<Key android:popupKeyboard="@xml/keyboard_quote" android:keyOutputText="'X'" android:keyLabel="' '" />
+		<Key android:popupKeyboard="@xml/keyboard_quote" android:keyOutputText="&quot;X&quot;" android:keyLabel="&quot; &quot;" />
 		<Key android:popupKeyboard="@xml/keyboard_symbol" android:keyOutputText="//X" android:keyLabel="//" />
 		<Key android:popupKeyboard="@xml/keyboard_punct" android:keyOutputText=";" android:keyLabel=";" />
 		<Key android:popupKeyboard="@xml/keyboard_web" android:keyOutputText="&lt;X>" android:keyLabel="&lt; >" />

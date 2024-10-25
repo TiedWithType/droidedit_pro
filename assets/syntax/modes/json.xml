@@ -20,10 +20,16 @@
 
 		<!-- mark pair separator as OPERATOR -->
 		<SEQ TYPE="OPERATOR">:</SEQ>
+		<SEQ TYPE="OPERATOR">,</SEQ>
+		<SEQ TYPE="OPERATOR">;</SEQ>
+		<SEQ TYPE="OPERATOR">}</SEQ>
+		<SEQ TYPE="OPERATOR">]</SEQ>
+		<SEQ TYPE="OPERATOR">{</SEQ>
+		<SEQ TYPE="OPERATOR">[</SEQ>
 
-		<!-- mark these special values as LITERAL2 -->
-		<SEQ TYPE="LITERAL2">true</SEQ>
-		<SEQ TYPE="LITERAL2">false</SEQ>
-		<SEQ TYPE="LITERAL2">null</SEQ>
+		<!-- mark these special values as KEYWORD1 -->
+		<SEQ TYPE="KEYWORD1">true</SEQ>
+		<SEQ TYPE="KEYWORD2">false</SEQ>
+		<SEQ TYPE="KEYWORD3">null</SEQ>
 	</RULES>
 </MODE>
